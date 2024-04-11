@@ -1,8 +1,3 @@
-// import { defineConfig } from 'vite';
-// import react from '@vitejs/plugin-react';
-// export default defineConfig({
-//   plugins: [react()],
-// });
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { copy } from "vite-plugin-copy";
@@ -10,7 +5,7 @@ export default defineConfig({
   plugins: [
     react(),
     copy({
-      targets: [{ src: "public", dest: "dist/public" }],
+      targets: [{ src: "public", dest: "dist" }],
     }),
   ],
 });
