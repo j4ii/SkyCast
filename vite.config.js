@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     react(),
     copy({
-      targets: [{ src: "public", dest: "dist" }],
+      targets: [{ src: "public", dest: "dist/public" }],
     }),
   ],
 });
