@@ -7,7 +7,7 @@ function WeatherCard({ weatherData }) {
     <div className="card">
       <div className="weatherImg">
         <img
-          src={`./public/assets/${weatherData.weather[0].icon}.png`}
+          src={`/assets/${weatherData.weather[0].icon}.png`}
           alt="Weather Icon"
         />
       </div>
@@ -17,14 +17,14 @@ function WeatherCard({ weatherData }) {
         <h2 className="sky">{weatherData.weather[0].description}</h2>
         <div>
           <span className="x">
-            <img src={"./public/assets/humidity.png"} alt="humidity" />
+            <img src={"/assets/humidity.png"} alt="humidity" />
             <span>
               <h2>{weatherData.main.humidity}%</h2>
               <h2>Humidity</h2>
             </span>
           </span>
           <span className="x">
-            <img src={"./public/assets/wind.png"} alt="wind" />
+            <img src={"/assets/wind.png"} alt="wind" />
             <span>
               <h2>{weatherData.wind.speed}m/s</h2>
               <h2>Wind Speed</h2>
