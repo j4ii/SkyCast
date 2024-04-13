@@ -23,5 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# Add an exception for public/assets
-!public/assets/
