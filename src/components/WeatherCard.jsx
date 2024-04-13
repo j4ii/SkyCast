@@ -6,7 +6,10 @@ function WeatherCard({ weatherData }) {
   return (
     <div className="card">
       <div className="weatherImg">
-        <img src={`./public/assets/${weatherData.weather[0].icon}.png`} />
+        <img
+          src={`./public/assets/${weatherData.weather[0].icon}.png`}
+          alt="Weather Icon"
+        />
       </div>
       <div className="weatherData">
         <h1>{(weatherData.main.temp - 273.15).toFixed(1)}°C</h1>
