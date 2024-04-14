@@ -9210,7 +9210,7 @@ function Dd() {
 "serviceWorker" in navigator &&
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("https://j4ii.github.io/SkyCast/sw.js", { scope: '/SkyCast/' })
+      .register("/SkyCast/sw.js", { scope: '/SkyCast/' })
       .then((e) => {
         console.log("SW registered: ", e);
       })
