@@ -9207,17 +9207,14 @@ function Dd() {
     ],
   });
 }
-"serviceWorker" in navigator &&
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("https://j4ii.github.io/SkyCast/sw.js")
-      .then((e) => {
-        console.log("SW registered: ", e);
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('https://j4ii.github.io/SkyCast/sw.js', { scope: '/SkyCast/' })
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
       })
-      .catch((e) => {
-        console.log("SW registration failed: ", e);
+      .catch(error => {
+        console.error('Service Worker registration failed:', error);
       });
   });
-Ql.createRoot(document.getElementById("root")).render(
-  z.jsx(wc.StrictMode, { children: z.jsx(Dd, {}) })
-);
+}
