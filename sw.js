@@ -27,7 +27,7 @@ if (!self.define) {
     s[t] = Promise.all(n.map((e) => c[e] || l(e))).then((e) => (r(...e), o));
   };
 }
-define(["https://j4ii.github.io/SkyCast/workbox-7cfec069.js"], function (e) {
+define(["https://j4ii.github.io/SkyCast/workbox-7cfec069"], function (e) {
   "use strict";
   self.addEventListener("message", (e) => {
     e.data && "SKIP_WAITING" === e.data.type && self.skipWaiting();
