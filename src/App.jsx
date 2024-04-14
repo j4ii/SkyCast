@@ -155,7 +155,9 @@ function App() {
 
   return (
     <>
-      <h1 className="title">SkyCast</h1>
+      <a href="https://j4ii.github.io/SkyCast/index.html">
+        <h1 className="title">SkyCast</h1>
+      </a>
       <>
         <WeatherForm
           cityInput={cityInput}
@@ -177,3 +179,16 @@ function App() {
 }
 
 export default App;
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log("SW registered: ", registration);
+      })
+      .catch((registrationError) => {
+        console.log("SW registration failed: ", registrationError);
+      });
+  });
+}
